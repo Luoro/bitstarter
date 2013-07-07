@@ -6,7 +6,7 @@ var fs=require('fs');
 
 app.get('/', function(request, response) {
 	var archivo = fs.readFile('index.html', 'utf-8');
-	buf = new Buffer(archivo, 'utf-8');
+	var buf = new Buffer(archivo, 'utf-8');
 	response.send(buf.toString('utf-8'));
 });
 
